@@ -29,6 +29,19 @@ The objective is to enable data-driven inventory planning, improve stock availab
 
 ---
 
+## Project Progress
+
+- [x] Task 1 — Data Preparation & Business Analysis
+- [x] Task 2 — Time Series Analysis & Decomposition
+- [ ] Task 3 — Sales Forecasting using SARIMA, Prophet & XGBoost
+- [ ] Task 4 — Product Category & Region Forecasting
+- [ ] Task 5 — Anomaly Detection
+- [ ] Task 6 — Product Demand Segmentation
+- [ ] Task 7 — Streamlit Dashboard
+- [ ] Task 8 — Executive Business Report
+
+---
+
 ## Features
 
 - Time Series Analysis
@@ -149,7 +162,7 @@ Coming Soon
 
 ## Results
 
-Under Development
+Results will be updated after training, evaluating, and comparing all forecasting models.
 
 ---
 
@@ -164,7 +177,7 @@ Under Development
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Naman Arora**
 
