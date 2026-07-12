@@ -33,10 +33,10 @@ The objective is to enable data-driven inventory planning, improve stock availab
 
 - [x] Task 1 — Data Preparation & Business Analysis
 - [x] Task 2 — Time Series Analysis & Decomposition
-- [ ] Task 3 — Sales Forecasting using SARIMA, Prophet & XGBoost
-- [ ] Task 4 — Product Category & Region Forecasting
-- [ ] Task 5 — Anomaly Detection
-- [ ] Task 6 — Product Demand Segmentation
+- [x] Task 3 — Sales Forecasting using SARIMA, Prophet & XGBoost
+- [x] Task 4 — Product Category & Region Forecasting
+- [x] Task 5 — Anomaly Detection
+- [x] Task 6 — Product Demand Segmentation
 - [ ] Task 7 — Streamlit Dashboard
 - [ ] Task 8 — Executive Business Report
 
@@ -94,7 +94,17 @@ SalesForecasting_NamanArora/
 │      ├── train.csv
 │      └── vgsales.csv
 
-│── charts/
+charts/
+├── overall_monthly_sales_trend.png
+├── yearly_sales_by_region.png
+├── sarima_forecast.png
+├── prophet_forecast.png
+├── prophet_components.png
+├── xgboost_forecast.png
+├── category_region_forecast.png
+├── isolation_forest_anomalies.png
+├── elbow_method.png
+└── product_demand_clusters.png
 
 │── reports/
 
@@ -135,12 +145,21 @@ Business Recommendations
 
 ---
 
-## Models Used
+## Machine Learning Models
+
+### Forecasting
 
 - SARIMA
 - Facebook Prophet
 - XGBoost Regressor
+
+### Anomaly Detection
+
 - Isolation Forest
+- Z-Score Detection
+
+### Product Segmentation
+
 - K-Means Clustering
 - Principal Component Analysis (PCA)
 
@@ -148,9 +167,11 @@ Business Recommendations
 
 ## Evaluation Metrics
 
-- MAE
-- RMSE
-- MAPE
+The forecasting models were compared using:
+
+- MAE (Mean Absolute Error)
+- RMSE (Root Mean Squared Error)
+- MAPE (Mean Absolute Percentage Error)
 
 ---
 
@@ -174,12 +195,16 @@ Results will be updated after training, evaluating, and comparing all forecastin
 - Inventory optimization module
 - API integration
 - Demand alert notifications
+- Docker Deployment
+- CI/CD Pipeline
 
 ---
 
 ## Author
 
 **Naman Arora**
+
+B.Tech Computer Science & Engineering
 
 Final Internship Project
 

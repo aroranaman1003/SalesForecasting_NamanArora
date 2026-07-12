@@ -1,9 +1,8 @@
-
 # Python
 __pycache__/
 *.py[cod]
 
-# Jupyter Notebook
+# Jupyter
 .ipynb_checkpoints/
 
 # macOS
@@ -19,3 +18,9 @@ venv/
 
 # Log Files
 *.log
+
+# Python cache
+.pytest_cache/
+
+# Jupyter exported checkpoints
+*.nbconvert.ipynb
