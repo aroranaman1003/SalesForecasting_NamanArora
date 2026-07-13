@@ -15,7 +15,7 @@ st.set_page_config(
 # ==========================================
 
 st.sidebar.success(
-    "👈 Select a page from the navigation panel."
+    "Select a page from the navigation panel."
 )
 
 st.sidebar.markdown("---")
@@ -58,7 +58,7 @@ st.divider()
 # Project Architecture
 # ==========================================
 
-st.subheader("🏗 Project Architecture")
+st.subheader("Project Architecture")
 
 st.write("""
 The architecture below illustrates the complete workflow implemented in this project,
@@ -111,7 +111,7 @@ st.divider()
 # Technology Stack
 # ==========================================
 
-st.subheader("🛠 Technology Stack")
+st.subheader("Technology Stack")
 
 left, right = st.columns(2)
 
