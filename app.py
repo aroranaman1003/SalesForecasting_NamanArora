@@ -14,44 +14,42 @@ st.set_page_config(
 # Sidebar
 # ==========================================
 
-st.sidebar.image(
-    "assets/logo.png",
-    use_container_width=True
-)
-
 st.sidebar.success(
     "👈 Select a page from the navigation panel."
 )
 
 st.sidebar.markdown("---")
 
-st.sidebar.markdown("""
-### Dashboard Modules
+st.sidebar.subheader("Dashboard Modules")
 
-- 📈 Sales Overview
-- 🔮 Forecast Explorer
-- 🚨 Anomaly Report
-- 📦 Product Demand Segments
+st.sidebar.markdown("""
+- Sales Overview
+- Forecast Explorer
+- Anomaly Report
+- Product Demand Segments
 """)
 
 # ==========================================
 # Dashboard Title
 # ==========================================
 
-st.title("📊 End-to-End Sales Forecasting & Demand Intelligence Dashboard")
+st.title("End-to-End Sales Forecasting & Demand Intelligence Dashboard")
 
 st.markdown("""
 Welcome to **Naman Arora's Sales Forecasting Dashboard**.
 
-This project demonstrates a complete Machine Learning pipeline for sales forecasting,
-anomaly detection, and product demand segmentation.
+This project presents an end-to-end Machine Learning pipeline for analyzing
+historical sales data and generating business insights through forecasting,
+anomaly detection, and product segmentation.
 
-### Key Objectives
+### Project Objectives
 
-- 📈 Forecast future sales demand
-- 🚨 Detect abnormal sales behaviour
-- 📦 Segment products using Machine Learning
-- 📊 Support business decision making
+- Forecast future sales demand
+- Detect unusual sales anomalies
+- Segment products based on demand patterns
+- Support inventory planning and business decision making
+
+Use the navigation panel on the left to explore each module.
 """)
 
 st.divider()
@@ -63,7 +61,9 @@ st.divider()
 st.subheader("🏗 Project Architecture")
 
 st.write("""
-The following architecture summarizes the complete workflow implemented in this project.
+The architecture below illustrates the complete workflow implemented in this project,
+starting from raw sales data collection to forecasting, anomaly detection,
+product segmentation, and interactive dashboard visualization.
 """)
 
 st.image(
@@ -77,14 +77,33 @@ st.divider()
 # Dashboard Summary
 # ==========================================
 
-st.subheader("📌 Dashboard Summary")
+st.subheader("Dashboard Summary")
 
 col1, col2, col3, col4 = st.columns(4)
 
-col1.metric("Forecast Models", "3")
-col2.metric("Regions", "4")
-col3.metric("Categories", "3")
-col4.metric("Anomaly Methods", "2")
+with col1:
+    st.metric(
+        label="Forecast Models",
+        value="3"
+    )
+
+with col2:
+    st.metric(
+        label="Regions",
+        value="4"
+    )
+
+with col3:
+    st.metric(
+        label="Categories",
+        value="3"
+    )
+
+with col4:
+    st.metric(
+        label="Anomaly Methods",
+        value="2"
+    )
 
 st.divider()
 
@@ -97,6 +116,7 @@ st.subheader("🛠 Technology Stack")
 left, right = st.columns(2)
 
 with left:
+
     st.markdown("""
 - Python
 - Pandas
@@ -105,6 +125,7 @@ with left:
 """)
 
 with right:
+
     st.markdown("""
 - Scikit-Learn
 - Prophet
@@ -118,17 +139,20 @@ st.divider()
 # Dashboard Modules
 # ==========================================
 
-st.subheader("📂 Dashboard Modules")
+st.subheader("Dashboard Modules")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.success("📈 Sales Overview")
-    st.success("🔮 Forecast Explorer")
+
+    st.success("Sales Overview")
+
+    st.success("Forecast Explorer")
 
 with col2:
-    st.warning("🚨 Anomaly Report")
-    st.info("📦 Product Demand Segments")
+
+    st.warning("Anomaly Report")
+    st.info("Product Demand Segments")
 
 st.divider()
 
