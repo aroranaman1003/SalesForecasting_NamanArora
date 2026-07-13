@@ -6,17 +6,58 @@ st.set_page_config(
     layout="wide"
 )
 
+# Sidebar Logo
 st.sidebar.image(
     "assets/logo.png",
     use_container_width=True
 )
 
+# Banner
 st.image(
     "assets/banner.png",
     use_container_width=True
 )
 
-st.title("Welcome to Naman Arora's Sales Forecasting Dashboard")
+# Title
+st.title("📊 End-to-End Sales Forecasting & Demand Intelligence")
 
-st.write("This is a simple dashboard to visualize sales forecasting results.\nSelect a page from the sidebar to explore different aspects of the sales data and forecasting results.")
+# Description
+st.markdown("""
+Welcome to **Naman Arora's Sales Forecasting Dashboard**.
 
+This project analyzes historical sales data to forecast future demand, detect anomalies, and segment products based on demand patterns.
+
+### Features
+- 📈 Sales Trend Analysis
+- 🔮 Sales Forecasting
+- 🚨 Anomaly Detection
+- 📦 Product Demand Segmentation
+""")
+
+# Dashboard Metrics
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric("Forecast Models", "3")
+col2.metric("Regions", "4")
+col3.metric("Categories", "3")
+col4.metric("Anomaly Detection", "2 Methods")
+
+st.divider()
+
+st.subheader("🛠 Tech Stack")
+
+st.write("""
+- Python
+- Pandas
+- Matplotlib
+- Scikit-Learn
+- XGBoost
+- Prophet
+- Streamlit
+""")
+
+st.divider()
+
+st.info(
+    "👈 Use the sidebar to explore different modules of the dashboard."
+)
