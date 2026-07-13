@@ -1,5 +1,9 @@
 import streamlit as st
 
+# ==========================================
+# Page Configuration
+# ==========================================
+
 st.set_page_config(
     page_title="Sales Forecasting Dashboard",
     page_icon="📊",
@@ -10,17 +14,24 @@ st.set_page_config(
 # Sidebar
 # ==========================================
 
-st.sidebar.image(
-    "assets/logo.png",
-    use_container_width=True
-)
-
 st.sidebar.success(
     "👈 Select a page from the navigation panel."
 )
 
 # ==========================================
-# Title
+# Project Logo (Centered)
+# ==========================================
+
+left, center, right = st.columns([1,2,1])
+
+with center:
+    st.image(
+        "assets/logo.png",
+        width=220
+    )
+
+# ==========================================
+# Dashboard Title
 # ==========================================
 
 st.title("📊 End-to-End Sales Forecasting & Demand Intelligence Dashboard")
@@ -28,15 +39,40 @@ st.title("📊 End-to-End Sales Forecasting & Demand Intelligence Dashboard")
 st.markdown("""
 Welcome to **Naman Arora's Sales Forecasting Dashboard**.
 
-This project presents an end-to-end Machine Learning pipeline that analyzes historical sales data to:
+This dashboard demonstrates a complete Machine Learning pipeline that transforms
+historical sales data into actionable business insights.
+
+The system can:
 
 - 📈 Forecast future sales demand
 - 🚨 Detect unusual sales anomalies
-- 📦 Segment products based on demand behavior
-- 📊 Support inventory planning and business decision-making
+- 📦 Segment products based on purchasing behavior
+- 📊 Assist inventory planning and business decision making
 
-Use the sidebar to explore each module of the project.
+Use the navigation panel on the left to explore each module.
 """)
+
+st.divider()
+
+# ==========================================
+# Project Architecture
+# ==========================================
+
+st.subheader("🏗 Project Architecture")
+
+st.write("""
+The architecture below illustrates the complete workflow followed in this project.
+
+It starts from raw sales data, performs preprocessing and feature engineering,
+builds forecasting and anomaly detection models, segments products using
+Machine Learning, and finally visualizes everything through an interactive
+Streamlit dashboard.
+""")
+
+st.image(
+    "assets/architecture.png",
+    use_container_width=True
+)
 
 st.divider()
 
@@ -50,35 +86,35 @@ col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.metric(
-        "Forecast Models",
-        "3"
+        label="Forecast Models",
+        value="3"
     )
 
 with col2:
     st.metric(
-        "Regions",
-        "4"
+        label="Regions",
+        value="4"
     )
 
 with col3:
     st.metric(
-        "Categories",
-        "3"
+        label="Categories",
+        value="3"
     )
 
 with col4:
     st.metric(
-        "Anomaly Methods",
-        "2"
+        label="Anomaly Methods",
+        value="2"
     )
 
 st.divider()
 
 # ==========================================
-# Tech Stack
+# Technology Stack
 # ==========================================
 
-st.subheader("🛠 Tech Stack")
+st.subheader("🛠 Technology Stack")
 
 left, right = st.columns(2)
 
@@ -108,15 +144,15 @@ st.divider()
 
 st.subheader("📂 Dashboard Modules")
 
-left, right = st.columns(2)
+col1, col2 = st.columns(2)
 
-with left:
+with col1:
 
     st.success("📈 Sales Overview")
 
     st.success("🔮 Forecast Explorer")
 
-with right:
+with col2:
 
     st.warning("🚨 Anomaly Report")
 
@@ -125,29 +161,9 @@ with right:
 st.divider()
 
 # ==========================================
-# Project Architecture
-# ==========================================
-
-st.subheader("🏗 Project Architecture")
-
-st.write("""
-The workflow below illustrates the complete pipeline followed in this project,
-starting from raw sales data preprocessing to forecasting, anomaly detection,
-product demand segmentation, and interactive business intelligence using
-Streamlit.
-""")
-
-st.image(
-    "assets/architecture.png",
-    use_container_width=True
-)
-
-st.divider()
-
-# ==========================================
 # Footer
 # ==========================================
 
 st.caption(
-    "Developed by Naman Arora | End-to-End Sales Forecasting & Demand Intelligence System"
+    "Developed by Naman Arora | End-to-End Sales Forecasting & Demand Intelligence Dashboard"
 )
