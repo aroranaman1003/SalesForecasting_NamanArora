@@ -3,11 +3,10 @@ import pandas as pd
 
 st.set_page_config(
     page_title="Anomaly Report",
-    page_icon="🚨",
     layout="wide"
 )
 
-st.title("🚨 Sales Anomaly Report")
+st.title("Sales Anomaly Report")
 
 st.header("Isolation Forest Anomaly Detection")
 

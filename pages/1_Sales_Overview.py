@@ -4,11 +4,10 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(
     page_title="Sales Overview",
-    page_icon="📊",
     layout="wide"
 )
 
-st.title("📊 Sales Overview Dashboard")
+st.title("Sales Overview Dashboard")
 
 # Load Dataset
 df = pd.read_csv("data/train.csv")

@@ -24,3 +24,6 @@ venv/
 
 # Jupyter exported checkpoints
 *.nbconvert.ipynb
+
+# Optional
+*.egg-info/

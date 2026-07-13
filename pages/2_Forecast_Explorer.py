@@ -4,11 +4,10 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(
     page_title="Forecast Explorer",
-    page_icon="📈",
     layout="wide"
 )
 
-st.title("📈 Forecast Explorer")
+st.title("Forecast Explorer")
 
 df = pd.read_csv("data/train.csv")
 

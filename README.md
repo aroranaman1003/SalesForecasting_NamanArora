@@ -37,8 +37,8 @@ The objective is to enable data-driven inventory planning, improve stock availab
 - [x] Task 4 — Product Category & Region Forecasting
 - [x] Task 5 — Anomaly Detection
 - [x] Task 6 — Product Demand Segmentation
-- [ ] Task 7 — Streamlit Dashboard
-- [ ] Task 8 — Executive Business Report
+- [x] Task 7 — Streamlit Dashboard
+- [x] Task 8 — Executive Business Report
 
 ---
 
@@ -88,30 +88,57 @@ SalesForecasting_NamanArora/
 │── app.py
 │── requirements.txt
 │── README.md
+│── runtime.txt
+│── summary.docx
 │── .gitignore
-
-│── data/
-│      ├── train.csv
-│      └── vgsales.csv
-
-charts/
-├── overall_monthly_sales_trend.png
-├── yearly_sales_by_region.png
-├── sarima_forecast.png
-├── prophet_forecast.png
-├── prophet_components.png
-├── xgboost_forecast.png
-├── category_region_forecast.png
-├── isolation_forest_anomalies.png
-├── elbow_method.png
-└── product_demand_clusters.png
-
-│── reports/
-
-│── models/
-
-│── assets/
+│
+├── assets/
+│   └── architecture.png
+│
+├── charts/
+│   ├── overall_monthly_sales_trend.png
+│   ├── yearly_sales_by_region.png
+│   ├── sarima_forecast.png
+│   ├── prophet_forecast.png
+│   ├── prophet_components.png
+│   ├── xgboost_forecast.png
+│   ├── category_region_forecast.png
+│   ├── isolation_forest_anomalies.png
+│   ├── zscore_anomalies.png
+│   ├── elbow_method.png
+│   └── product_demand_clusters.png
+│
+├── data/
+│   ├── train.csv
+│   └── vgsales.csv
+│
+└── models/
+    ├── anomaly_table.csv
+    ├── product_clusters.csv
+    ├── furniture_forecast.csv
+    ├── technology_forecast.csv
+    ├── office_supplies_forecast.csv
+    ├── east_forecast.csv
+    ├── west_forecast.csv
+    └── zscore_anomalies.csv
 ```
+
+---
+
+## Dataset
+
+This project uses two publicly available datasets:
+
+### Primary Dataset
+
+- **Superstore Sales Dataset**
+- Contains approximately four years of historical retail sales data.
+- Used for exploratory data analysis, time series forecasting, demand forecasting, anomaly detection, product segmentation, and dashboard visualization.
+
+### Secondary Dataset
+
+- **Video Game Sales Dataset**
+- Used as a supplementary dataset to practice multi-source data analysis and anomaly detection techniques as part of the internship project.
 
 ---
 
@@ -177,13 +204,43 @@ The forecasting models were compared using:
 
 ## Dashboard Preview
 
-Coming Soon
+The project includes a deployed multi-page Streamlit dashboard featuring:
+
+- Sales Overview Dashboard
+- Forecast Explorer
+- Anomaly Report
+- Product Demand Segments
+
+The dashboard enables interactive visualization of forecasting results and business insights.
 
 ---
 
 ## Results
 
-Results will be updated after training, evaluating, and comparing all forecasting models.
+## Results
+
+The project successfully compares three forecasting models (SARIMA, Prophet, and XGBoost) for retail sales prediction.
+
+Key achievements include:
+
+- Forecasted sales for the next 3 months
+- Product-level demand segmentation using K-Means clustering
+- Detection of abnormal sales patterns using Isolation Forest and Z-Score methods
+- Interactive business dashboard built with Streamlit
+- Executive business report with actionable recommendations
+
+---
+
+## Deployment
+
+The project is deployed using Streamlit Community Cloud.
+
+Features available in the dashboard:
+
+- Sales Overview
+- Forecast Explorer
+- Anomaly Report
+- Product Demand Segments
 
 ---
 
@@ -205,6 +262,8 @@ Results will be updated after training, evaluating, and comparing all forecastin
 **Naman Arora**
 
 B.Tech Computer Science & Engineering
+
+Jaypee Institute of Information Technology
 
 Final Internship Project
 

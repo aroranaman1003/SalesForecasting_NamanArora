@@ -3,11 +3,10 @@ import pandas as pd
 
 st.set_page_config(
     page_title="Product Demand Segments",
-    page_icon="📦",
     layout="wide"
 )
 
-st.title("📦 Product Demand Segments")
+st.title("Product Demand Segments")
 
 st.image(
     "charts/product_demand_clusters.png",

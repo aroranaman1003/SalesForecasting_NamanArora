@@ -116,18 +116,18 @@ st.subheader("Technology Stack")
 left, right = st.columns(2)
 
 with left:
-
     st.markdown("""
 - Python
 - Pandas
 - NumPy
 - Matplotlib
+- Plotly
 """)
 
 with right:
-
     st.markdown("""
 - Scikit-Learn
+- Statsmodels
 - Prophet
 - XGBoost
 - Streamlit
@@ -161,5 +161,5 @@ st.divider()
 # ==========================================
 
 st.caption(
-    "Developed by Naman Arora | End-to-End Sales Forecasting & Demand Intelligence Dashboard"
+    "Developed by Naman Arora | Final Internship Project – XYLOFY AI"
 )
