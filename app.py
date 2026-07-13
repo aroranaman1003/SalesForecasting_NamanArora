@@ -2,79 +2,81 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Sales Forecasting Dashboard",
-    page_icon="📈",
+    page_icon="📊",
     layout="wide"
 )
 
-# ==========================
+# ==========================================
 # Sidebar
-# ==========================
+# ==========================================
 
 st.sidebar.image(
     "assets/logo.png",
     use_container_width=True
 )
 
-st.sidebar.title("Navigation")
-
-st.sidebar.info(
-    "Use the pages below to explore the dashboard."
+st.sidebar.success(
+    "👈 Select a page from the navigation panel."
 )
 
-# ==========================
+# ==========================================
 # Title
-# ==========================
+# ==========================================
 
-st.title("📊 End-to-End Sales Forecasting & Demand Intelligence")
+st.title("📊 End-to-End Sales Forecasting & Demand Intelligence Dashboard")
 
 st.markdown("""
 Welcome to **Naman Arora's Sales Forecasting Dashboard**.
 
-This dashboard demonstrates an end-to-end Machine Learning pipeline for:
+This project presents an end-to-end Machine Learning pipeline that analyzes historical sales data to:
 
-- 📈 Sales Trend Analysis
-- 🔮 Sales Forecasting
-- 🚨 Anomaly Detection
-- 📦 Product Demand Segmentation
+- 📈 Forecast future sales demand
+- 🚨 Detect unusual sales anomalies
+- 📦 Segment products based on demand behavior
+- 📊 Support inventory planning and business decision-making
 
-Navigate through the pages from the sidebar to explore each module.
+Use the sidebar to explore each module of the project.
 """)
 
 st.divider()
 
-# ==========================
-# Dashboard Metrics
-# ==========================
+# ==========================================
+# Dashboard Summary
+# ==========================================
 
 st.subheader("📌 Dashboard Summary")
 
 col1, col2, col3, col4 = st.columns(4)
 
-col1.metric(
-    "Forecast Models",
-    "3"
-)
+with col1:
+    st.metric(
+        "Forecast Models",
+        "3"
+    )
 
-col2.metric(
-    "Regions",
-    "4"
-)
+with col2:
+    st.metric(
+        "Regions",
+        "4"
+    )
 
-col3.metric(
-    "Categories",
-    "3"
-)
+with col3:
+    st.metric(
+        "Categories",
+        "3"
+    )
 
-col4.metric(
-    "Anomaly Methods",
-    "2"
-)
+with col4:
+    st.metric(
+        "Anomaly Methods",
+        "2"
+    )
 
 st.divider()
 
-# ==========================
+# ==========================================
 # Tech Stack
-# ==========================
+# ==========================================
 
 st.subheader("🛠 Tech Stack")
 
@@ -100,21 +102,21 @@ with right:
 
 st.divider()
 
-# ==========================
+# ==========================================
 # Dashboard Modules
-# ==========================
+# ==========================================
 
 st.subheader("📂 Dashboard Modules")
 
-c1, c2 = st.columns(2)
+left, right = st.columns(2)
 
-with c1:
+with left:
 
     st.success("📈 Sales Overview")
 
     st.success("🔮 Forecast Explorer")
 
-with c2:
+with right:
 
     st.warning("🚨 Anomaly Report")
 
@@ -122,27 +124,30 @@ with c2:
 
 st.divider()
 
-# ==========================
+# ==========================================
 # Project Architecture
-# ==========================
+# ==========================================
 
 st.subheader("🏗 Project Architecture")
+
+st.write("""
+The workflow below illustrates the complete pipeline followed in this project,
+starting from raw sales data preprocessing to forecasting, anomaly detection,
+product demand segmentation, and interactive business intelligence using
+Streamlit.
+""")
 
 st.image(
     "assets/architecture.png",
     use_container_width=True
 )
 
-st.caption(
-    "Complete workflow of the Sales Forecasting & Demand Intelligence pipeline."
-)
-
 st.divider()
 
-# ==========================
+# ==========================================
 # Footer
-# ==========================
+# ==========================================
 
 st.caption(
-    "Developed by Naman Arora | End-to-End Sales Forecasting & Demand Intelligence Dashboard"
+    "Developed by Naman Arora | End-to-End Sales Forecasting & Demand Intelligence System"
 )
